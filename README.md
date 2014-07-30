@@ -45,16 +45,14 @@ Yes.
 FAQ
 ---
 
-Q. Does it actually work ?
-
+Q. Does it actually work ?  
 A. The [bash-argsparse](https://github.com/Anvil/bash-argsparse)
 project uses this filter. Check
 [http://argsparse.livna.org/doxygen/](the result). Click on the
 links. See by yourself.
 
 Q. Why is the project named bash-doxygen while the filter is named
-doxygen-bash ?
-
+doxygen-bash ?  
 A. Yeah, haha. Seriously.
 
 
