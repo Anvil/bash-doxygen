@@ -1,7 +1,7 @@
 bash-doxygen
 ============
 
-A basic doxygen filter (originaly written for GNU sed) allowing you to
+A basic doxygen filter (originaly written in GNU sed) allowing you to
 add inline-documentation to your bash shell scripts.
 
 ### Supported shell syntaxes
@@ -14,7 +14,7 @@ add inline-documentation to your bash shell scripts.
 * Some top level declarations will be recognized if you use the
   `declare` primitive: 
   * `declare -a` for arrays
-  * `declare -A` for associavite arrays
+  * `declare -A` for associative arrays
   * `declare -i` for integers
   * `declare -r` for read-only strings
   * Any other top-level `declare` statement will consider variable is a string.
