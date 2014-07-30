@@ -51,8 +51,21 @@ project uses this filter. Check
 [the result](http://argsparse.livna.org/doxygen/). Click on the
 links. See by yourself.
 
+Q. Is it rock-solid ?  
+A. No.
+
+Q. Do you accept patches ?  
+A. Definitely.
+
 Q. Why is the project named bash-doxygen while the filter is named
 doxygen-bash ?  
 A. Yeah, haha. Seriously.
 
+Q. Can i include the doxygen-bash.sed file in my own tarball ?  
+A. See the COPYING file.
 
+Q. Dude. sed ? Seriously ?  
+A. Are you.. Jealous ?
+
+Q. ... ?  
+A. Don't you dare !
