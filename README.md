@@ -8,9 +8,8 @@ add inline-documentation to your bash shell scripts.
 
 * All lines starting with a `## ` (without any leading blanks) are
   provided to doxygen. You can use all doxygen command you want in
-  those lines. (see
-  [http://www.stack.nl/~dimitri/doxygen/manual/commands.html](doxygen
-  documentation))
+  those lines. (see [doxygen
+  documentation](http://www.stack.nl/~dimitri/doxygen/manual/commands.html))
 
 * Some top level declarations will be recognized if you use the
   `declare` primitive: 
@@ -48,7 +47,7 @@ FAQ
 Q. Does it actually work ?  
 A. The [bash-argsparse](https://github.com/Anvil/bash-argsparse)
 project uses this filter. Check
-[http://argsparse.livna.org/doxygen/](the result). Click on the
+[the result](http://argsparse.livna.org/doxygen/). Click on the
 links. See by yourself.
 
 Q. Why is the project named bash-doxygen while the filter is named
