@@ -6,7 +6,7 @@ add inline-documentation to your bash shell scripts.
 
 ### Supported shell syntaxes
 
-* All lines starting with a '## ' (without any leading blanks) are
+* All lines starting with a `## ` (without any leading blanks) are
   provided to doxygen. You can use all doxygen command you want in
   those lines. (see
   [http://www.stack.nl/~dimitri/doxygen/manual/commands.html](doxygen
@@ -46,11 +46,15 @@ FAQ
 ---
 
 Q. Does it actually work ?
-A. The [github](bash-argsparse) project uses this filter. Check
+
+A. The [bash-argsparse](https://github.com/Anvil/bash-argsparse)
+project uses this filter. Check
 [http://argsparse.livna.org/doxygen/](the result). Click on the
 links. See by yourself.
 
-Q. Why is the project named bash-doxygen while the filter is named doxygen-bash ?
+Q. Why is the project named bash-doxygen while the filter is named
+doxygen-bash ?
+
 A. Yeah, haha. Seriously.
 
 
