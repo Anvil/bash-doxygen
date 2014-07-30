@@ -9,7 +9,7 @@ add inline-documentation to your bash shell scripts.
 * All lines starting with a `## ` (without any leading blanks) are
   provided to doxygen. You can use all doxygen command you want in
   those lines. (see [doxygen
-  documentation](http://www.stack.nl/~dimitri/doxygen/manual/commands.html))
+  documentation](http://www.stack.nl/~dimitri/doxygen/manual/commands.html)).
 
 * Some top level declarations will be recognized if you use the
   `declare` primitive: 
@@ -19,10 +19,11 @@ add inline-documentation to your bash shell scripts.
   * `declare -r` for read-only strings
   * Any other top-level `declare` statement will consider variable is a string.
 
-* Functions declaration will be recognized if:
-  1. a `## @fn` line is found
-  2. function is declared **without** the non-posix `function` keyword
-  3. the opening { is on the same line than the `funcname()` instruction
+* Functions declaration will be recognized if all these conditions are met:
+  1. a `## @fn` line is found above the function declaration,
+  2. the function is declared **without** the non-posix `function` keyword,
+  3. the body-opening `{` char is on the same line than the
+  `funcname()` instruction.
 
 How to use it
 -------------
