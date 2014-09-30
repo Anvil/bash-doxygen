@@ -18,10 +18,10 @@ add inline-documentation to your bash shell scripts.
   * `declare -i` for integers
   * Any other top-level `declare` statement will consider variable is a string.
   * Those additionnal declaration attributes can be combined with -A/-a/-i/<none>:
-   * `declare -l` will mark the variable as LowerCase
-   * `declare -u` will mark the variable as UpperCase
-   * `declare -x` will mark the variable as Exported
-   * `declare -r` will mark the variable as ReadOnly
+    * `declare -l` will mark the variable as LowerCase
+    * `declare -u` will mark the variable as UpperCase
+    * `declare -x` will mark the variable as Exported
+    * `declare -r` will mark the variable as ReadOnly
 
 * Functions declaration will be recognized if all these conditions are met:
   1. a `## @fn` line is found above the function declaration,
