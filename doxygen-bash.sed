@@ -13,9 +13,77 @@
     s/\(^\|\n\)## /\1\/\/! /g
     p
 }
-s/^declare -a \([^=]\+\).*$/Array \1;/p
-s/^declare -A \([^=]\+\).*$/AssociativeArray \1;/p
-s/^declare -r \([^=]\+\)=\(.*\)$/ReadOnly String \1 = \2;/p
-s/^declare -i \(.\+\)$/Integer \1;/p
-s/^declare \([^-].*\)$/String \1;/p
+/^declare /{
+    x
+    s/.*//
+    x
+    s/^declare \+//
+    /^[^-]/{
+        x
+	s/.*/&String /
+	x
+	b declareprint
+    }
+    :declare
+    s/^-\([aAilrtux]\+\) \+-\([aAilrtux]\+\) \+/-\1\2 /
+    t declare
+    /^-[aAiltur]*x/{
+        x
+	s/.*/&Exported /
+	x
+    }
+    /^-[aAiltux]*r/{
+        x
+	s/.*/&ReadOnly /
+	x
+    }   
+    /^-[aAlturx]*i/{
+        x
+	s/.*/&Integer /
+	x
+    }
+    /^-[aAlturx]*i/!{
+        /^-[aAtrx]*l/{
+            x
+	    s/.*/&LowerCase /
+	    x
+	}
+        /^-[aAtrx]*u/{
+            x
+	    s/.*/&UpperCase /
+	    x
+	}
+	x
+	s/.*/&String /
+	x
+    }
+    /^-[Ailturx]*a/{
+        x
+	s/.*/&Array /
+	x
+	b deletevalue
+    }
+    /^-[ailturx]*A/{
+        x
+	s/.*/&AssociativeArray /
+	x
+	b deletevalue
+    }
+    :declareprint
+    s/-[^ ]\+ \+//
+    x
+    G
+    s/\n//
+    s/=/ = /
+    s/$/;/
+    p
+    x
+}
+b end
+
+: deletevalue
+s/\(-[^ ]\+ \+[^=]\+\)=.*/\1/
+b declareprint
+
+:end
 s/^## /\/\/! /p
