@@ -54,25 +54,25 @@
         x
         s/.*/&Integer /
         x
+        b array
     }
 
     # String type. handling.
-    /^-[aAlturx]*i/!{
-        /^-[aAtrx]*l/{
-            x
-            s/.*/&LowerCase /
-            x
-        }
-        /^-[aAtrx]*u/{
-            x
-            s/.*/&UpperCase /
-            x
-        }
+    /^-[aAtrx]*l/{
         x
-        s/.*/&String /
+        s/.*/&LowerCase /
         x
     }
+    /^-[aAtrx]*u/{
+        x
+        s/.*/&UpperCase /
+        x
+    }
+    x
+    s/.*/&String /
+    x
 
+    : array
     # For arrays, we remove the initialisation since I dont know yet
     # how to print it for doxygen to understand.
     /^-[Ailturx]*a/{
