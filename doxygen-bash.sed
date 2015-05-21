@@ -21,6 +21,7 @@
     s/\(@fn \([^(]\+\)(\)\([^)]*\)\().*\)\n\2() *{/\1\3\4\n\2(\3) { }/
     s/\(^\|\n\)## /\1\/\/! /g
     p
+    b end
 }
 /^declare /{
     # The principle is quite easy. For every declare option, we add a
@@ -110,6 +111,13 @@
     s/$/;/
     p
     x
+    b end
+}
+
+# Delete non doxygen-related lines content, but not the line
+# themselves.
+/^## /!{
+     s/^.*$//p
 }
 b end
 
