@@ -32,14 +32,13 @@ add inline-documentation to your bash shell scripts.
 How to use it
 -------------
 
-Mention doxygen-bash.sed in either the INTPUT_FILTER or the
-FILTER_PATTERN directive of your Doxyfile. If doxygen-bash.sed is in
+1. If you do not have a Doxygen configuration file (usually named Doxyfile), you can generate one by simply running `doxygen -g`.
+2. Edit the Doxyfile to map shell files to C parser: `EXTENSION_MAPPING = sh=C`
+3. Set your shell script file names pattern as Doxygen inputs, like e.g.: `FILE_PATTERNS = *.sh`
+4. Mention doxygen-bash.sed in either the `INTPUT_FILTER` or the
+`FILTER_PATTERN` directive of your Doxyfile. If doxygen-bash.sed is in
 your $PATH, then you can just invoke it as is, else use `sed -n -f
 /path/to/doxygen-bash.sed --`.
-
-Remember than you can generate a brand new Doxyfile by simply running
-`doxygen -g`.
-
 
 Known limitations
 -----------------
