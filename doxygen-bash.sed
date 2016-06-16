@@ -25,7 +25,7 @@
     # Remove the function body to avoid interference, and re-introduce
     # list of parameters in the funcname(<here>).
     s/\(@fn \([^(]\+\)(\)\([^)]*\)\().*\)\n\2() *{/\1\3\4\n\2(\3) { }/
-    # Replace all '## ' to '//! ' at beginning-of-line.
+    # Replace all '## ' by '//! ' at beginning-of-line.
     s/\(^\|\n\)## /\1\/\/! /g
     p
     b end
