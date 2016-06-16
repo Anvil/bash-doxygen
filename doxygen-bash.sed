@@ -13,7 +13,7 @@
         # Here, we-reinsert param names into the <funcname>()
         s/\(@fn [^(\n]\+\)(\([^(]*\))\(.*\)\(@param \)\([^ \n]\+\(\.\.\.\)\?\)\([^\n]*\)$/\1(\2, \5)\3\4\5\7/
     }
-    / *\(function *\)\?[a-z:A-Z0-9_]\+ *() *{ *$/!{
+    / *\(function *\)\?[a-z:.A-Z0-9_]\+ *() *{ *$/!{
         N
         b step
     }
@@ -22,7 +22,8 @@
     # Here, we should have @fn (, param1, param2, param3), we remove
     # the first extra ", ".
     s/\(@fn[^(]\+\)(, /\1(/
-    # Remove the function body to avoid interference.
+    # Remove the function body to avoid interference, and re-introduce
+    # list of parameters in the funcname(<here>).
     s/\(@fn \([^(]\+\)(\)\([^)]*\)\().*\)\n\2() *{/\1\3\4\n\2(\3) { }/
     # Replace all '## ' to '//! ' at beginning-of-line.
     s/\(^\|\n\)## /\1\/\/! /g
