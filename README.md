@@ -25,8 +25,7 @@ add inline-documentation to your bash shell scripts.
 
 * Functions declaration will be recognized if all these conditions are met:
   1. a `## @fn` line is found above the function declaration,
-  2. the function is declared **without** the non-posix `function` keyword,
-  3. the body-opening `{` char is on the same line than the
+  2. the body-opening `{` char is on the same line than the
   `funcname()` instruction.
 
 How to use it
