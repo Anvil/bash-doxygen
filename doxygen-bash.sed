@@ -18,6 +18,7 @@
 ## Project Home Page: http://github.com/Anvil/bash-doxygen/
 ## Project Author: Damien Nadé <github@livna.org>
 ##
+
 /^## \+@fn/{
     :step
     /@param [^ ]\+ .*$/{
@@ -49,6 +50,7 @@
     p
     b end
 }
+
 /^declare /{
     # The principle is quite easy. For every declare option, we add a
     # keyword into the sed exchange buffer. Once everything is parsed,
@@ -139,6 +141,15 @@
     x
     b end
 }
+
+/^ *export \+[_a-zA-Z]/{
+    s/=/ = /
+    s/\([^;]\) *$/\1;/
+    s/^ *export \+/Exported String /
+    p
+    b end
+}
+
 
 # Delete non doxygen-related lines content, but not the line
 # themselves.
