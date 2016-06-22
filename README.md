@@ -22,8 +22,9 @@ add inline-documentation to your bash shell scripts.
     * `declare -u` will mark the variable as UpperCase
     * `declare -x` will mark the variable as Exported
     * `declare -r` will mark the variable as ReadOnly
-  * Additionnaly, declarations through an `export` statements will
-    also be recognized as Exported String variables.
+  * Additionnaly, declaring a variable with an `export` statement will
+    also be recognized and the variable will be marked as an Exported
+    String.
 
 * Functions declaration will be recognized if all these conditions are met:
   1. a `## @fn` line is found above the function declaration,
