@@ -1,0 +1,29 @@
+
+
+
+//! @file
+//! @author Damien Nadé <bash-argsparse@livna.org>
+//! @brief Bash Doxgen Unit Test
+//! @copyright WTFPLv2
+//! @version 1
+
+ReadOnly String readonly = readonly-value;
+String Array array;
+String Array assigned_array;
+String AssociativeArray associative_array;
+String AssociativeArray assigned_associative_array;
+Integer integer;
+Integer assigned_integer = 2;
+Exported String declared_exported;
+Exported String assigned_declared_exported = 1;
+
+Exported String exported;
+Exported String assigned_exported = 1;
+
+//! @fn function_1(param1)
+//! @brief 1st function
+//! @param param1 first parameter
+function_1(param1) { }
+
+
+
