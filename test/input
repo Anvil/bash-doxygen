@@ -27,3 +27,12 @@ function_1() {
 	bogus
 	bogus2;
 }
+
+## @fn function_2()
+## @brief 2nd function
+## @param param1 first parameter
+## @param param2 second parameter
+function function_2() {
+	bogus
+	bogus2;
+}

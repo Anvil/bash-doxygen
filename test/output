@@ -27,3 +27,12 @@ function_1(param1) { }
 
 
 
+
+//! @fn function_2(param1, param2)
+//! @brief 2nd function
+//! @param param1 first parameter
+//! @param param2 second parameter
+function_2(param1, param2) { }
+
+
+
