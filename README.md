@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Anvil/bash-doxygen.svg?branch=master)](https://travis-ci.org/Anvil/bash-doxygen)
+
 bash-doxygen
 ============
 
