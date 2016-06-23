@@ -7,7 +7,8 @@
 ## @copyright WTFPLv2
 ## @version 1
 
-declare -r readonly=readonly-value
+declare -r readonly
+declare -r assigned_readonly=readonly-value
 declare -a array
 declare -a assigned_array=(1 2)
 declare -A associative_array
@@ -16,6 +17,15 @@ declare -i integer
 declare -i assigned_integer=2
 declare -x declared_exported
 declare -x assigned_declared_exported=1
+
+declare -ri readonly_integer
+declare -ri assigned_readonly_integer=2
+
+declare -rix readonly_exported_integer
+declare -rix assigned_readonly_exported_integer=3
+
+declare -rA readonly_associative_array
+declare -rA assigned_readonly_associative_array=([a]=2 [b]=3)
 
 export exported
 export assigned_exported=1

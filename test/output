@@ -7,7 +7,8 @@
 //! @copyright WTFPLv2
 //! @version 1
 
-ReadOnly String readonly = readonly-value;
+ReadOnly String readonly;
+ReadOnly String assigned_readonly = readonly-value;
 String Array array;
 String Array assigned_array;
 String AssociativeArray associative_array;
@@ -16,6 +17,15 @@ Integer integer;
 Integer assigned_integer = 2;
 Exported String declared_exported;
 Exported String assigned_declared_exported = 1;
+
+ReadOnly Integer readonly_integer;
+ReadOnly Integer assigned_readonly_integer = 2;
+
+Exported ReadOnly Integer readonly_exported_integer;
+Exported ReadOnly Integer assigned_readonly_exported_integer = 3;
+
+ReadOnly String AssociativeArray readonly_associative_array;
+ReadOnly String AssociativeArray assigned_readonly_associative_array;
 
 Exported String exported;
 Exported String assigned_exported = 1;
