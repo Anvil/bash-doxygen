@@ -1,0 +1,4 @@
+language: bash
+
+script:
+  - ./doxygen-bash.sed test/input | diff - output
