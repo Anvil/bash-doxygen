@@ -27,6 +27,12 @@ declare -rix assigned_readonly_exported_integer=3
 declare -rA readonly_associative_array
 declare -rA assigned_readonly_associative_array=([a]=2 [b]=3)
 
+declare -l lowercase
+declare -l assigned_lowercase=l
+
+declare -u uppercase
+declare -u assigned_uppercase=U
+
 export exported
 export assigned_exported=1
 

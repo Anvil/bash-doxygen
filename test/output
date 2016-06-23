@@ -27,6 +27,12 @@ Exported ReadOnly Integer assigned_readonly_exported_integer = 3;
 ReadOnly String AssociativeArray readonly_associative_array;
 ReadOnly String AssociativeArray assigned_readonly_associative_array;
 
+LowerCase String lowercase;
+LowerCase String assigned_lowercase = l;
+
+UpperCase String uppercase;
+UpperCase String assigned_uppercase = U;
+
 Exported String exported;
 Exported String assigned_exported = 1;
 
