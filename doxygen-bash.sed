@@ -33,12 +33,12 @@
         # Here, we-reinsert param names into the <funcname>()
         s/\(@fn [^(\n]\+\)(\([^(]*\))\(.*\)\(@param \)\([^ \n]\+\(\.\.\.\)\?\)\([^\n]*\)$/\1(\2, \5)\3\4\5\7/
     }
-    / *\(function *\)\?[a-z:.A-Z0-9_]\+ *() *{ *$/!{
+    / *\(function \+\)\?[a-z:.A-Z0-9_]\+ *() *{ *$/!{
         N
         b step
     }
     # Remove optional 'function' keyword (and some extra spaces).
-    s/ *\(function *\)\?\([a-z:.A-Z0-9_]\+ *() *{\) *$/\2/
+    s/ *\(function \+\)\?\([a-z:.A-Z0-9_]\+ *() *{\) *$/\2/
     # Here, we should have @fn (, param1, param2, param3), we remove
     # the first extra ", ".
     s/\(@fn[^(]\+\)(, /\1(/
