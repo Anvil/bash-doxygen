@@ -46,6 +46,7 @@
     # list of parameters in the funcname(<here>).
     s/\(@fn \([^(]\+\)(\)\([^)]*\)\().*\)\n\2() *{/\1\3\4\n\2(\3) { }/
     # Replace all '## ' by '//! ' at beginning-of-line.
+    s/\(^\|\n\)##\n/\1\/\/!\n/g
     s/\(^\|\n\)## /\1\/\/! /g
     p
     b end
@@ -153,7 +154,7 @@
 
 # Delete non doxygen-related lines content, but not the line
 # themselves.
-/^## /!{
+/^## \|^##$/!{
      s/^.*$//p
 }
 b end
@@ -165,4 +166,4 @@ b declareprint
 
 :end
 # Make all ## lines doxygen-able.
-s/^## /\/\/! /p
+s/^##\( \|$\)/\/\/!\1/p

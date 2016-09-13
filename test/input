@@ -6,6 +6,7 @@
 ## @brief Bash Doxgen Unit Test
 ## @copyright WTFPLv2
 ## @version 1
+##
 
 declare -r readonly
 declare -r assigned_readonly=readonly-value
@@ -39,6 +40,8 @@ export assigned_exported=1
 ## @fn function_1()
 ## @brief 1st function
 ## @param param1 first parameter
+##
+## Don't skip empty line above
 function_1() {
 	bogus
 	bogus2;
