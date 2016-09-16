@@ -48,7 +48,7 @@ How to use it
    in your $PATH, then you can just invoke it as is, else use `sed -n
    -f /path/to/doxygen-bash.sed --`.
 
-*CAREFUL*: If you are a BSD and or a Mac user, you will defintely want
+*CAREFUL*: If you are a BSD and or a Mac user, you will definitely want
 to use `gsed` instead of `sed` to make it work.
 
 Known limitations
