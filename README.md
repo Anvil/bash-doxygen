@@ -3,28 +3,28 @@
 bash-doxygen
 ============
 
-A basic doxygen filter (originaly written in GNU sed) allowing you to
+A basic doxygen filter (originally written in GNU sed) allowing you to
 add inline-documentation to your bash shell scripts.
 
 ### Supported shell syntaxes
 
 * All lines starting with a `## ` (without any leading blanks) are
-  provided to doxygen. You can use all doxygen command you want in
+  passed to doxygen. You can use all the doxygen commands you want in
   those lines. (see [doxygen
   documentation](http://www.stack.nl/~dimitri/doxygen/manual/commands.html)).
 
 * Some top level declarations will be recognized if you use the
-  `declare` primitive: 
+  `declare` primitive:
   * `declare -a` for arrays
   * `declare -A` for associative arrays
   * `declare -i` for integers
   * Any other top-level `declare` statement will consider variable is a string.
-  * Those additionnal declaration attributes can be combined with -A/-a/-i/<none>:
+  * Those additional declaration attributes can be combined with -A/-a/-i/<none>:
     * `declare -l` will mark the variable as LowerCase
     * `declare -u` will mark the variable as UpperCase
     * `declare -x` will mark the variable as Exported
     * `declare -r` will mark the variable as ReadOnly
-  * Additionnaly, declaring a variable with an `export` statement will
+  * Additionally, declaring a variable with an `export` statement will
     also be recognized and the variable will be marked as an Exported
     String.
 
@@ -32,7 +32,7 @@ add inline-documentation to your bash shell scripts.
   1. a `## @fn` line is found above the function declaration,
   2. the function is declared either with or without the non-posix
   `function` keyword, but always with `()`.
-  3. the body-opening `{` char is on the same line than the
+  3. the body-opening `{` char is on the same line as the
   `funcname()` instruction.
 
 How to use it
@@ -59,27 +59,27 @@ Yes.
 FAQ
 ---
 
-Q. Does it actually work ?  
+Q. Does it actually work ?
 A. The [bash-argsparse](https://github.com/Anvil/bash-argsparse)
 project uses this filter. Check
 [the result](http://argsparse.livna.org/doxygen/). Click on the
 links. See by yourself.
 
-Q. Is it rock-solid ?  
+Q. Is it rock-solid ?
 A. No.
 
-Q. Do you accept patches ?  
+Q. Do you accept patches ?
 A. Definitely.
 
 Q. Why is the project named bash-doxygen while the filter is named
-doxygen-bash ?  
+doxygen-bash ?
 A. Yeah, haha. Seriously.
 
-Q. Can i include the doxygen-bash.sed file in my own tarball ?  
-A. See the COPYING file.
+Q. Can I include the doxygen-bash.sed file in my own tarball ?
+A. See the [COPYING](COPYING) file.
 
-Q. Dude. sed ? Seriously ?  
+Q. Dude. sed ? Seriously ?
 A. Are you.. Jealous ?
 
-Q. ... ?  
+Q. ... ?
 A. Don't you dare !
