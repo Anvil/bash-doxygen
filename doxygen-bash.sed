@@ -142,6 +142,26 @@
     x
     b end
 }
+/^export /{
+    # Reset exchange buffer
+    x
+    s/.*//
+    x
+    # Remove export keyword, we wont need it anymore
+    s/^export \+//
+    x
+    s/.*/&Exported /
+    x
+    s/-[^ ]\+ \+//
+    x
+    G
+    s/\n//
+    s/=/ = /
+    s/$/;/
+    p
+    x
+    b end
+}
 
 /^ *export \+[_a-zA-Z]/{
     s/=/ = /
