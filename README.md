@@ -35,6 +35,10 @@ add inline-documentation to your bash shell scripts.
   3. the body-opening `{` char is on the same line as the
   `funcname()` instruction.
 
+* Add an internal doxygen macro to type parameter. By default all parameter are considered as `String`
+  `@paramtype <param_name> <param_type> <param_detail>`
+  Will produce a typed function declaration and valid `@param` tag for doxygen
+
 How to use it
 -------------
 

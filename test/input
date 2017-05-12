@@ -55,3 +55,22 @@ function function_2() {
 	bogus
 	bogus2;
 }
+
+## @fn function_3()
+## @brief 3rd function
+## @paramtype param1 int first parameter
+##
+## Don't skip empty line above
+function_3() {
+	bogus
+	bogus2;
+}
+
+## @fn function_4()
+## @brief 4nd function
+## @paramtype param1 String first parameter
+## @paramtype param2 int second parameter
+function function_4() {
+	bogus
+	bogus2;
+}

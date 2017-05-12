@@ -55,3 +55,22 @@ function_2(String param1, String param2) { }
 
 
 
+
+//! @fn function_3(int param1)
+//! @brief 3rd function
+//! @param param1 first parameter
+//!
+//! Don't skip empty line above
+function_3(int param1) { }
+
+
+
+
+//! @fn function_4(String param1, int param2)
+//! @brief 4nd function
+//! @param param1 first parameter
+//! @param param2 second parameter
+function_4(String param1, int param2) { }
+
+
+
