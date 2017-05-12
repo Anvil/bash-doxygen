@@ -37,21 +37,21 @@ UpperCase String assigned_uppercase = U;
 Exported String exported;
 Exported String assigned_exported = 1;
 
-//! @fn function_1(param1)
+//! @fn function_1(String param1)
 //! @brief 1st function
 //! @param param1 first parameter
 //!
 //! Don't skip empty line above
-function_1(param1) { }
+function_1(String param1) { }
 
 
 
 
-//! @fn function_2(param1, param2)
+//! @fn function_2(String param1, String param2)
 //! @brief 2nd function
 //! @param param1 first parameter
 //! @param param2 second parameter
-function_2(param1, param2) { }
+function_2(String param1, String param2) { }
 
 
 

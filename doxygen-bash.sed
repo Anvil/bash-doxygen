@@ -31,7 +31,7 @@
         # \6: optional dot-dot-dot string
         # \7: everything after \5 to end of line
         # Here, we-reinsert param names into the <funcname>()
-        s/\(@fn [^(\n]\+\)(\([^(]*\))\(.*\)\(@param \)\([^ \n]\+\(\.\.\.\)\?\)\([^\n]*\)$/\1(\2, \5)\3\4\5\7/
+        s/\(@fn [^(\n]\+\)(\([^(]*\))\(.*\)\(@param \)\([^ \n]\+\(\.\.\.\)\?\)\([^\n]*\)$/\1(\2, String \5)\3\4\5\7/
     }
     / *\(function \+\)\?[a-z:.A-Z0-9_]\+ *() *{ *$/!{
         N
