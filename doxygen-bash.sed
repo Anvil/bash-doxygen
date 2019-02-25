@@ -154,7 +154,7 @@
 
 # Delete non doxygen-related lines content, but not the line
 # themselves.
-/^\(\s*\)## \|^\1##$/!{
+/^\(\s*\)##\( \|$\)/!{
      s/^.*$//p
 }
 b end
