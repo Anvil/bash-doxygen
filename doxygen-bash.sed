@@ -31,8 +31,23 @@
         # \6: optional dot-dot-dot string
         # \7: everything after \5 to end of line
         # Here, we-reinsert param names into the <funcname>()
-        s/\(@fn [^(\n]\+\)(\([^(]*\))\(.*\)\(@param \)\([^ \n]\+\(\.\.\.\)\?\)\([^\n]*\)$/\1(\2, \5)\3\4\5\7/
+        s/\(@fn [^(\n]\+\)(\([^(]*\))\(.*\)\(@param \)\([^ \n]\+\(\.\.\.\)\?\)\([^\n]*\)$/\1(\2, String \5)\3\4\5\7/
     }
+    # Add an internal keyword @paramtype param_name param_type param_detail
+    # And transform to @param param_name param_detail
+    /@paramtype [^ ]\+ [^ ]\+ .*$/{
+        # Groups are
+        # \1: @fn <funcname>
+        # \2: already identified params
+        # \3: previous doc string
+        # \4: newly identified param name plus optional dot-dot-dot string
+        # \5: optional dot-dot-dot string
+        # \6: newly identified param type
+        # \7: everything after \6 to end of line
+        # Here, we-reinsert param names into the <funcname>()
+        s/\(@fn [^(\n]\+\)(\([^(]*\))\(.*\)@paramtype \([^ \n]\+\(\.\.\.\)\?\) \([^ \n]\+\)\([^\n]*\)$/\1(\2, \6 \4)\3@param \4\7/
+    }
+
     / *\(function \+\)\?[a-z:.A-Z0-9_]\+ *() *{ *$/!{
         N
         b step
